@@ -1,0 +1,12 @@
+@if(headerfield.type === 'text'){
+<input [type]="headerfield.type" [(ngModel)]="fieldValue" [id]="headerfield.id"
+    (keypress)="hideInput($event)">
+}
+@else if(headerfield.type === 'select'){
+<select name="" id="" [value]="fieldValue">
+    <option value="select options">select options</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="others">Others</option>
+</select>
+}

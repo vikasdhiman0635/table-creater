@@ -1,0 +1,18 @@
+<table>
+    <tr>
+        @for(header of tableData.headerName; track $index) {
+        <th [id]="header.id">{{header.diplplayName}}</th>
+        }
+    </tr>
+    @for (item of tableData.data; track $index) {
+        <tr>
+            <td>
+                {{item.name}}
+                <input type="text">
+            </td>
+            <td>{{item.age}}</td>
+            <td>{{item.gender}}</td>
+            <td>{{item.email}}</td>
+        </tr>
+    }
+</table>
